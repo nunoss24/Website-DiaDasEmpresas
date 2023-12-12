@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Página web referente ao evento Dia das Empresas, realizado no dia 13 de dezembro de 2022, no auditório da ESTGV. Este evento visa a aproximar os seus alunos do tecido empresarial e promover o networking entre estudantes e empresas num processo de procura de emprego ainda enquadrado na formação académica.">
+    <meta name="keywords"
+        content="Dia, Empresas, ESTGV, auditório, dezembro, networking, emprego, estágios, DAPE, Viseu, IPV, TDM, DI, EI, informática, tecnologia, Engenharia Informática, Tecnologias e Design de Multimédia, Departamento de Informática, evento, empresas, estudantes, finalistas">
+    <meta name="author"
+        content="Beatriz Mendes, Filipa Mesquita, Henrique Mateus, João Nascimento, Michael Nunes, Nuno Santos">
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/png" href="image/logo_simples_cores.png">
+    <script src="JS/script.js" async></script>
+    <link rel="stylesheet" href="CSS/estilos.css" type="text/css">
+    <title>Dia Das Empresas</title>
+</head>
+
+<body>
+    <!--Header-->
+    <header class="header-background" id="inicio">
+        <div class="header-mobile">
+            <!--Navbar Mobile-->
+            <nav class="menuToggle">
+                <input id="check" class="check" type="checkbox" aria-label="botao">
+                <span class="menu-span"></span>
+                <span class="menu-span"></span>
+                <span class="menu-span"></span>
+                <ul class="menu">
+                    <li><a href="#programa" onclick="document.getElementById('check').click()">Programa</a></li>
+                    <li><a href="#galeria" onclick="document.getElementById('check').click()">Galeria</a></li>
+                    <li><a href="#workshops" onclick="document.getElementById('check').click()">Workshops</a></li>
+                    <li><a href="#sobre" onclick="document.getElementById('check').click()">Sobre</a></li>
+                    <li><a href="#contactos" onclick="document.getElementById('check').click()">Contactos</a></li>
+                </ul>
+            </nav>
+            <figure><a href="#inicio"><img src="image/logo_simples_preto.png"
+                        alt="Logotipo do evento Dia das Empresas a preto que contém um D e um E maiúsculos com cantos arredondados, onde este último é invertido e estão um em cima do outro."
+                        class="logo-mobile" id="logo-mobile"></a></figure>
+        </div>
+        <!--Conteúdo do Header-->
+        <div class="header-content">
+            <img src="image/logo.png"
+                alt="Logotipo do evento Dia das Empresas a branco que contém um D e um E maiúsculos com cantos arredondados, onde este último é invertido e estão um em cima do outro, à frente deste logotipo está o descritivo que tem escrito Dia das Empresas a branco com uma font bold e onde os D's não têm a parte das costas cortadas e os E's só têm as perninhas horizontais."
+                class="header-logo">
+            <div class="slogan">
+                <h4>WORKSHOPS</h4>
+                <h4>NETWORKING</h4>
+                <h4>EMPREGO</h4>
+            </div>
+            <div class="data">
+                <h2 class="data-dia">13</h2>
+                <h2 class="data-line">|</h2>
+                <div class="data-mesano">
+                    <h3 class="data-mes"> DEZ</h3>
+                    <h3 class="data-ano"> 2022</h3>
+                </div>
+                <h6 class="data-local">Auditório ESTGV</h6>
+            </div>
+            <div>
+                <p class="countdown" id="tempocount"></p>
+                <p class="countdown-texto" id="textocount">DIAS HORAS MINUTOS SEGUNDOS</p>
+            </div>
+        </div>
+    </header>
+    <!--Navbar Desktop-->
+    <nav class="navbar">
+        <input type="checkbox" aria-label="botao">
+        <span></span>
+        <span></span>
+        <span></span>
+        <figure><a href="#inicio"><img src="image/logo_simples.png"
+                    alt="Logotipo do evento Dia das Empresas a branco que contém um D e um E maiúsculos com cantos arredondados, onde este último é invertido e estão um em cima do outro."></a>
+        </figure>
+        <ul class="navitems">
+            <li><a href="#programa">Programa</a></li>
+            <li><a href="#galeria">Galeria</a></li>
+            <li><a href="#workshops">Workshops</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#contactos">Contactos</a></li>
+        </ul>
+    </nav>
+    <main>
+        <!--Texto Inicial-->
+        <div class="intro-formatting">
+            <p class="intro-text">
+                O Dia das Empresas é uma iniciativa que visa aproximar os seus alunos do tecido
+                empresarial.
+                <br><br>
+                O Departamento de Informática da ESTGV promove o networking entre estudantes e empresas num processo de
+                procura de emprego ainda
+                enquadrado na formação académica.
+            </p>
+        </div>
+        <!--Stakeholders / As 3 grandes partes interessadas do evento-->
+        <section class="stakeholders-formatting">
+            <div class="stakeholders-formatting-div">
+                <figure class="stakeholders-icon"><img src="image/stake1.png" class="stakeholders-image"
+                        alt="Imagem vetorizada de um diploma a branco para representar os estudantes.">
+                </figure>
+                <h6 class="stakeholders-titulo">Estudantes</h6>
+                <p>Este evento serve como primeiro contacto dos estudantes com as empresas, para que possam estabelecer
+                    contactos profissionais, enquadrados numa perspetiva académica.</p>
+            </div>
+            <div class="stakeholders-formatting-div">
+                <figure class="stakeholders-icon"><img src="image/stake2.png" class="stakeholders-image"
+                        alt="Imagem vetorizada de um edifício alto a branco para representar as empresas.">
+                </figure>
+                <h6 class="stakeholders-titulo">Empresas</h6>
+                <p>Apresentam a sua atividade aos estudantes e os projetos submetidos no DAPE para que se possam
+                    candidatar à realização de projeto numa empresa.
+                    As sessões possibilitam aos
+                    alunos o esclarecimento de dúvidas sobre os projetos.
+                </p>
+            </div>
+            <div class="stakeholders-formatting-div">
+                <figure class="stakeholders-icon"><img src="image/stake3.png" class="stakeholders-image"
+                        alt="Imagem vetorizada de uma escola estilo americano a branco para representar a ESTGV.">
+                </figure>
+                <h6 class="stakeholders-titulo">Escola</h6>
+                <p>A ESTGV dá aos seus etudantes a oportunidade de apresentar os seus CV's às empresas como forma de
+                    candidatura à realização de um projeto final de curso de licenciatura.
+                </p>
+            </div>
+        </section>
+        <!--Programa do Evento-->
+        <section class="programa-formatting" id="programa">
+            <h2 class="titulos">Programa</h2>
+            <div class="programa-div">
+                <div class="programa-div-intervalos">
+                    <p>9:00</p>
+                    <h4>Sessão de Abertura</h4>
+                </div>
+                <div class="programa-div-empresas">
+                    <p>9:30</p>
+                    <h6>Softinsa</h6>
+                </div>
+                <div class="programa-div-empresas">
+                    <p>10:00</p>
+                    <h6>Findmore Consulting</h6>
+                </div>
+                <div class="programa-div-empresas">
+                    <p>10:30</p>
+                    <h6>Claranet</h6>
+                </div>
+                <div class="programa-div-networking">
+                    <p>11:00</p>
+                    <h4>Networking</h4>
+                </div>
+                <div class="programa-div-empresas">
+                    <p>11:30</p>
+                    <h6>IntellectEU</h6>
+                </div>
+                <div class="programa-div-empresas">
+                    <p>12:00</p>
+                    <h6>PromptEQUATION - OdooGap</h6>
+                </div>
+                <div class="programa-div-empresas">
+                    <p>12:30</p>
+                    <h6>Deloitte</h6>
+                </div>
+                <div class="programa-div-intervalos">
+                    <p>13:00</p>
+                    <h4>Almoço livre</h4>
+                </div>
+                <div class="programa-div-empresas">
+                    <p>14:30</p>
+                    <h6>Altice Labs - InovaRia</h6>
+                </div>
+                <div class="programa-div-empresas">
+                    <p>15:00</p>
+                    <h6>TOMI Portugal</h6>
+                </div>
+                <div class="programa-div-networking">
+                    <p>15:30</p>
+                    <h4>Networking</h4>
+                </div>
+                <div class="programa-div-empresas">
+                    <p>16:00</p>
+                    <h6>HUF</h6>
+                </div>
+                <div class="programa-div-empresas">
+                    <p>16:30</p>
+                    <h6>2Play+</h6>
+                </div>
+                <div class="programa-div-empresas">
+                    <p>17:00</p>
+                    <h6>Kintech</h6>
+                </div>
+                <div class="programa-div-intervalos">
+                    <p>17:30</p>
+                    <h4>Encerramento</h4>
+                </div>
+            </div>
+        </section>
+        <figure class="separador1"> </figure>
+        <!--Galeria-->
+        <section id="galeria" class="galeria-section">
+            <h2 class="titulos">Galeria</h2>
+            <div class="galeria-div-dois">
+                <figure><img src="image/Galeria/IMG_0091.jpg"
+                        alt="Fotografia de um representante, homem, da Softinsa, com uma camisa azul por debaixo de uma camisola verde escura, este está a falar e à frente dele tem um púlpito com um computador e um microfone, atrás de si tem paredes de madeira do auditório da ESTGV e uma tela branca de projeção."
+                        class="galeria-duas-fotos"></figure>
+                <figure><img src="image/Galeria/IMG_0252.jpg"
+                        alt="Fotografia da palestra da empresa TOMI, onde no palco do auditório da ESTGV estão dois representantes, homens, da empresa, um deles está de camisa branca debaixo de uma camisola preta e está sentado numa cadeira preta com uma mesa à sua frente e do seu lado direito estão mais duas mesas e mais quatro cadeiras pretas, o outro representante está de casaco castanho e calças beges, à sua frente está um púlpito, um computador e microfone, atrás dos dois temos paredes de madeira e uma tela branca de projeção com uma apresentação da empresa TOMI."
+                        class="galeria-duas-fotos"></figure>
+            </div>
+            <div class="galeria-div-tres">
+                <figure><img src="image/Galeria/IMG_1625.jpg"
+                        alt="Fotografia com seis representantes da empresa Deloitte, quatro homens e duas mulheres, todos vestidos com roupa formal, estão a comunicar e um deles está sentado numa cadeira preta, com à sua frente uma mesa preta e um computador onde está a mexer, atrás deles têm um grande painel com folhas falsas verdes e o logotipo da Deloitte, que é a palavra da empresa e no final um ponto final verde, têm também um painel luminoso."
+                        class="galeria-tres-fotos"></figure>
+                <figure><img src="image/Galeria/IMG_1751.jpg"
+                        alt="Fotografia de dois representantes da empresa Project Box onde estão a falar sobre a sua empresa, um deles é homem com uma camisola gola alta e fecho, com óculos graduados e está a segurar um panfleto com informações da empresas, o outro é uma mulher que está com uma camisola preta, atrás deles está um rollup da empresa."
+                        class="galeria-tres-fotos"></figure>
+                <figure><img src="image/Galeria/IMG_1806.jpg"
+                        alt="Fotografia com três integrantes da empresa Oddogap, dois homem e uma mulher, estão a falar e têm à sua frente uma mesa preta com panfletos da empresa e do seu lado um rollup com o nome da empresa e o que a mesma faz, atrás têm outras pessoas que estão no evento Dia das Empresas a falar e outras empresas e os seus representantes."
+                        class="galeria-tres-fotos"></figure>
+            </div>
+            <div class="galeria-div-dois">
+                <figure><img src="image/Galeria/IMG_1820.jpg"
+                        alt="Fotografia de um representante, homem, da empresa IntellectEU com uma camisa azul clara, calças pretas e óculos graduados, onde está a olhar para uma tela branca de projeção, com informações da empresa, e a falar, atrás de si tem paredes de madeira do auditório da ESTGV e do seu lado esquerdo um púlpito com um computador."
+                        class="galeria-duas-fotos"></figure>
+                <figure><img src="image/Galeria/IMG_1886.jpg"
+                        alt="Fotografia do auditório da ESTGV, onde é mostrada a plateia, com várias pessoas sentadas nas cadeiras vermelhas da plateia, algumas estão a mexer em computadores outras a olhar para a tela branca de projeção, as paredes do auditório são de madeira com várias janelas verdes e estores verdes que estão fechados."
+                        class="galeria-duas-fotos"></figure>
+            </div>
+        </section>
+        <!--Secção com os logos das entidades organizadoras e participantes do evento-->
+        <section>
+            <h2 class="titulos">Organizadores</h2>
+            <div class="organizadores-formatting">
+                <figure><a href="http://www.di.estgv.ipv.pt/Dep/di/web/" target="_blank"><img
+                            src="image/Logotipos/di-01.png"
+                            alt="Logotipo do Departamento de Informática da ESTGV, que contém um triângulo, com cantos arredondados, formado pelas letras D e I, onde o D não tem o buraco, este triângulo tem um degradê de cores de um azul claro para um azul escuro. Do lado do triângulo tem as letras D e I em minúscula com uma cor azul escura e por debaixo um descritivo, escrito Departamento de Informática, a azul escuro."></a>
+                </figure>
+                <figure><a href="https://www.estgv.ipv.pt/estgv/" target="_blank"><img
+                            src="image/Logotipos/ipv_estgv-01.png"
+                            alt="Logotipo da Escola Superior de Tecnologia e Gestão de Viseu, que contém o logotipo do Instituto Politécnico de Viseu a vermelho, sendo este um círculo com uma ponta de uma espada do lado direito, representado assim o Viriato, do lado tem escrito Politécnico de Viseu a vermelho e por debaixo Tecnologia e Gestão Viseu a vermelho também e com um peso mais fino no tipo de letra."></a>
+                </figure>
+            </div>
+        </section>
+        <section>
+            <h2 class="titulos">Participantes</h2>
+            <div class="participantes-formatting">
+                <div>
+                    <figure><a href="https://www.softinsa.pt/pt/" target="_blank"><img
+                                src="image/Logotipos/softinsa-01.png"
+                                alt="Logotipo da empresa Softinsa sendo este um descritivo do nome da empresa, onde o F não tem a ligação da primeira perna horizontal para a segunda, o T tem um ligeiro corte na perna superior direita e o I um corte na ponta superior, onde estas duas letras se encaixam a partir dos cortes. O logotipo tem azul escuro como cor exceto no T e no I que têm um azul claro forte."></a>
+                    </figure>
+                    <figure><a href="https://www.findmore.pt/" target="_blank"><img
+                                src="image/Logotipos/findmore-01.png"
+                                alt="Logotipo da empresa Findmore que contém um descritivo do nome da empresa com um tipo de letra fino e com cor preta, no sítio do O está uma lupa com um mais dentro da mesma e por debaixo do R e do E está escrito consulting com um tipo de letra muito fino."></a>
+                    </figure>
+                    <figure><a href="https://www.claranet.pt/" target="_blank"><img
+                                src="image/Logotipos/claranet-01.png"
+                                alt="Logotipo da empresa Claranet sendo este um descritivo do nome da empresa com letras minúsculas e com cor vermelha."></a>
+                    </figure>
+                    <figure><a href="https://intellecteu.com/" target="_blank"><img
+                                src="image/Logotipos/intellecteu-01.png"
+                                alt="Logotipo da empresa IntellectEU que contém como logotipo um cubo mágico, onde é mostrado apenas dois lados do mesmo, onde do lado esquerdo todos os 9 quadrados são azuis claros menos o do meio que é azul escuro e do lado direito todos os quadrados são azuis escuros mas têm uns símbolos a imitar ligações de chips entre si. Do lado direito do cubo está escrito Intellect a minúsculo com um tipo de letra fino e a azul escuro e do lado superior do T está escrito EU, com metade do tamanho da palavra Intellect, com um tipo de letra fino e a azul claro."></a>
+                    </figure>
+                </div>
+                <div>
+                    <figure><a href="https://www.inova-ria.pt/" target="_blank"><img
+                                src="image/Logotipos/inovaria-01.png"
+                                alt="Logotipo da empresa Inovaria que escrito por extenso onde inova está a cinzento e ria a cinzento, e o pimeiro i tem a pinta laranja também. As duas palavras encontram-se juntas"></a>
+                    </figure>
+                    <figure><a href="https://www.erpgap.com/" target="_blank"><img
+                                src="image/Logotipos/odoogap-promp-01.png"
+                                alt="Esta imagem contém dois logos, o da empresa Odoogap, que está por cima contendo este todo em letras maiúsculas as cores amarelo e cor de rosa, estando todos os O's a amarelo. O logo da empresa Prompt Equation, que se encontra por baixo, Contem por cima a palavra Prompt toda em maiúscula e de cor preto e por baixo equation a azul que à volta do O está presente um hexágono."></a>
+                    </figure>
+                    <figure><a href="https://www2.deloitte.com/pt/pt.html" target="_blank"><img
+                                src="image/Logotipos/deloitte-01.png"
+                                alt="Logotipo da empresa Deloitte, sendo este escrito por extenso a preto, com letras a bold e tendo um ponto final verde no fim."></a>
+                    </figure>
+                    <figure><a href="https://www.alticelabs.com/" target="_blank"><img
+                                src="image/Logotipos/altice-01.png"
+                                alt="Logotipo da empresa Altice Labs que contém um símbolo sendo este um A minúsculo feito à mão dando assim um efeito de continuidade e tendo um degradê que vai aumentando a sua intensidade do branco até ao preto. Do lado direito do logo, estão as palavras altice e labs, estando altice por cima e labs por baixo e a altura de ambas ter a altura do simbolo. A palavra altice é mais destacada, sendo cerca de duas vezes maior que labs."></a>
+                    </figure>
+                </div>
+                <div>
+                    <figure><a href="https://tomiworld.com/pt/" target="_blank"><img src="image/Logotipos/tomi-01.png"
+                                alt="Logotipo da empresa TOMI, este é o nome da empresa escrito por extenso, contendo o símbolo de marca registada, em uma escala muito menor, em cima à direita no fim do nome. este logo contem por baixo um descritivo sendo este City's Best Friend, ocupando toda a largura que a palavra TOMI está a ocupar."></a>
+                    </figure>
+                    <figure><a href="https://www.huf-group.com/en" target="_blank"><img src="image/Logotipos/Huf-01.png"
+                                alt="Logotipo da empresa Huf, que é feito com uma inclinação da esquerda para a direita e debaixo para cima, sendo o nome escrito por cima desta diagonal que provém do fim da letra F."></a>
+                    </figure>
+                    <figure><a href="https://2play.pt/" target="_blank"><img src="image/Logotipos/2play-01.png"
+                                alt="Logotipo da empresa 2 play, este é azul claro e a sua font com linhas retas, tendo o A um formato de um triângulo."></a>
+                    </figure>
+                    <figure><a href="https://www.kyntech.pt/pt/" target="_blank"><img
+                                src="image/Logotipos/kyntech-01.png"
+                                alt="Logotipo da empresa kyndryl, sendo este o nome da empresa descrita por extenso em letras de cor vermelha e  minúsculas. Por baixo deste tem um descritivo onde diz Kyntech Services LDA | Kyndryl Group Company, estando este na mesma cor mas em letras maiúsculos, estando a frase a ocupar toda a extensão do nome da empresa em grande."></a>
+                    </figure>
+                </div>
+
+            </div>
+        </section>
+        <figure class="separador2"> </figure>
+        <!--Workshops-->
+        <section id="workshops">
+            <h2 class="titulos">Workshops</h2>
+            <div class="workshops-formatting">
+                <div>
+                    <img class="imagem-workshop" src="image/linkedin-site.png"
+                        alt="Imagem com tons de azuis claros e escuros, roxos e rosas, com elementos gráficos alusivos ao networking e a chips de computadores, com uma imagem com vários logotipos do LinkedIn, quadrado azul com in escrito a branco, com um efeito desfocado e na frente o logotipo descritivo do LinkedIn a branco, LinkedIn escrito onde o In está dentro de um quadrado branco e as letras I e N são transparentes.">
+                </div>
+                <div class="texto-linkedin">
+                    <h3 class="ws-titulo">LinkedIn</h3>
+                    <p class="ws-subtitulo">28-11-2022 / 30-11-2022</p>
+                    <p>Este workshop, proporcionado pelo Dia das Empresas, tem como objetivo a criação de perfis
+                        profissionais no LinkedIn e, assim preparar os alunos para no Dia das Empresas conseguirem
+                        atender a expetativas e requisitos das empresas.
+                        <br><BR>
+                        O LinkedIn é uma rede social que está focada no universo empresarial e no lado mais profissional
+                        da
+                        vida, permitindo a criação de perfis individuais ou de empresas.
+                        Serve para estes criarem redes de contactos
+                        - é
+                        o chamado networking que é, cada vez mais, fundamental para encontrar um novo emprego.
+                        <br><br>
+                        Cada utilizador resume as
+                        suas principais competências profissionais, bem como as experiências no mundo do trabalho e o
+                        percurso académico.
+                    </p>
+                </div>
+            </div>
+            <div class="workshops-formatting">
+                <div class="texto-cv">
+                    <h3 class="ws-titulo">Curriculum Vitae</h3>
+                    <p class="ws-subtitulo">25-11-2022</p>
+                    <p>Este workshop, proporcionado pelo Dia das Empresas, tem como objetivo a criação de currículos e,
+                        assim preparar os alunos para no Dia das Empresas estarem preparados e terem uma facilidade
+                        maior na sua relação com as empresas.
+                        <br><BR>
+                        Currículo, ou curriculum vitae, muitas vezes abreviado como CV, é um documento que resume ao
+                        conhecimento, as experiências e a carreira de uma pessoa, normalmente para fins profissionais,
+                        como
+                        a busca de um novo emprego. Serve para convecer recrutadores que você é a pessoa certa para o
+                        emprego.
+                    </p>
+                </div>
+                <div>
+                    <img class="imagem-workshop" src="image/cv-site.png"
+                        alt="Imagem com tons de azuis claros e escuros, roxos e rosas, com elementos gráficos alusivos ao networking e a chips de computadores, com uma imagem de um bloco de notas branco com gráficos azuis desenhados no mesmo e com um efeito desfocado, na frente escrito Curriculum Vitae a branco.">
+                </div>
+            </div>
+        </section>
+        <section class="sobre-formatting">
+            <h2 class="sobre-titulo" id="sobre">Sobre</h2>
+            <p class="sobre-text">O Departamento de Informática da Escola Superior de Tecnologia e Gestão de Viseu vai
+                levar a efeito o Dia das Empresas, no dia 13 de dezembro.
+                <br><br>
+                O evento terá o formato de uma feira de emprego, projetos e estágios, em que os alunos finalistas e
+                diplomados se poderão candidatar às ofertas apresentadas pelas empresas.
+                <br><br>
+                As empresas realizarão uma apresentação da sua atividade, das suas propostas de estágio e do perfil das
+                suas necessidades de contratação. Existirão intervalos entre as apresentações, como forma de promover o
+                networking com os intervenientes. Em paralelo, realiza-se uma sessão de recrutamento, na qual as
+                empresas terão contacto direto com os candidatos, que poderão deixar o seu CV e/ou realizar já uma
+                pequena entrevista.
+            </p>
+        </section>
+        <!--Secção com comentários sobre o evento feito com React-->
+        <section>
+            <h2 class="titulos">Comentários</h2>
+            <div id="comentario-zone"></div>
+        </section>
+        <!--Secção com os contactos e localização do evento-->
+        <section class="contacto-formatting" id="contactos">
+            <h2 class="titulos">Contactos</h2>
+            <div class="contacto-formatting-div">
+                <i class="fa fa-solid fa-location-arrow"></i>
+                <div class="contacto-texto">
+                    <h5>Departamento de Informática</h5>
+                    <h6>
+                        Escola Superior de Tecnologia de Viseu
+                    </h6>
+                    <p>
+                        Campus Politécnico de Repeses
+                        <br>3504-510 Viseu
+                    </p>
+                </div>
+            </div>
+            <div class="contacto-formatting-div">
+                <i class="fa fa-solid fa-phone"></i>
+                <div class="contacto-texto">
+                    <h6><a href="tel:232480533">232 480 533</a></h6>
+                </div>
+            </div>
+            <div class="contacto-formatting-div">
+                <i class="fa fa-solid fa-envelope"></i>
+                <div class="contacto-texto">
+                    <h5>
+                        Departamento de Informática
+                    </h5>
+                    <h6><a href="mailto:sec-di@estgv.ipv.pt">sec-di&#64;estgv.ipv.pt</a></h6>
+                    <br>
+                    <h5>
+                        Diretora de Departamento
+                    </h5>
+                    <p>
+                        Ana Cristina Wanzeller
+                        Guedes de Lacerda
+                    </p>
+                    <h6>
+                        <a href="mailto:cwanzeller@estgv.ipv.pt">cwanzeller&#64;estgv.ipv.pt</a>
+                    </h6>
+                </div>
+            </div>
+            <!--Botão com seta que volta para o inicio-->
+            <a href="#inicio">
+                <div id="setainicio" class="seta-inicio-button hide"><i
+                        class="fa fa-solid fa-arrow-up seta-inicio-icon"></i></div>
+            </a>
+        </section>
+    </main>
+    <!--Footer-->
+    <footer class="footer">
+        <div class="footer-align">
+            <figure class="logo-di"><a href="http://www.di.estgv.ipv.pt/Dep/di/web/" target="_blank"><img
+                        src="image/logo_DI-branco.png"
+                        alt="Logotipo do Departamento de Informática da ESTGV, que contém um triângulo, com cantos arredondados, formado pelas letras D e I, onde o D não tem o buraco, este triângulo é branco. Do lado do triângulo tem as letras D e I em minúscula com a cor branca."></a>
+            </figure>
+            <figure class="logo-dde"><a href="#inicio"><img src="image/logo_simples.png"
+                        alt="Logotipo do evento Dia das Empresas a branco que contém um D e um E maiúsculos com cantos arredondados, onde este último é invertido e estão um em cima do outro."></a>
+            </figure>
+            <h6 class="footer-text">&#169; Copyright 2022. Todos os direitos reservados.</h6>
+        </div>
+    </footer>
+
+</body>
+
+</html>
